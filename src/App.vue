@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <courseBase></courseBase>
+    <lessonNum></lessonNum>
+    <lessonName></lessonName>
     <lessonMain></lessonMain>
+    <courseInfo></courseInfo>
+    <lessonMember></lessonMember>
+    <lessonLog></lessonLog>
+    <lessonOperation></lessonOperation>
   </div>
 </template>
 
@@ -19,22 +25,33 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
-      data: null,//保存当前章节的信息
-      course:null,//保存所有课程的信息
-      status: null
+      data: null//保存当前章节的信息
     },
-});
+    mutations: {
+			data(state, payload){
+				state.data=payload
+			}
+		}
+})
+console.log(this.store)
 
 export default {
   name: 'app',
   components: {
     courseBase,
-    lessonMain
+    lessonMain,
+    lessonLog,
+    lessonMember,
+    lessonName,
+    lessonNum,
+    lessonOperation,
+    courseInfo
   },
   created(){
     this.$http.get('https://www.easy-mock.com/mock/591009d6f926ef14e26a56e8/lithii/main').then(response => {
-        this.someData = response.body;
-    }
+        var res = response.body;
+        
+    })
   }
 }
 
