@@ -1,0 +1,97 @@
+{
+  "error":0,
+  "status":"ok",
+  "project":{
+	  "anthor":"金城武",
+	  "create":"2017-04-24 01:25:34",
+	  "name":"重庆大学校园公开课",
+	  "school":"重庆大学",
+	  "academe":"电影学院",
+	  "guideTeacher":"李小龙",
+	  "personnel":["梁曹伟","周润发","张学友","刘德华"],
+	  "manager":{
+	  		"lessonManager":"金城武",
+		    "postManager":"金城武",
+			"operationManager":"金城武"		  
+	  },
+	  "file":{
+			"ppt":true,
+			"script":true,
+			"others":true
+	  }
+  },
+  "lessons":[
+  	{
+  		"name":"经济学原理",
+		"teacher":"张老师",
+  		"start":"2017-05-02",
+  		"end":"2017-06-02",
+  		"now":"4",
+		"planningScript":{
+			"length":"3000字",
+			"status":"0"
+		},
+		"pptFile":{
+			"length":"5000字",
+			"status":"1"
+		},
+		"scriptOpinion":true,
+		"sourceVideo":{
+			"length":"2.5小时",
+			"status":"0"
+		},
+		"videoModel":{
+			"length":"2.5小时",
+			"status":"0"
+		},
+		"modelOpinion":false,
+		"finalVideo":{
+			"length":"2.5小时",
+			"status":"0"
+		},
+		"videoOpinion":false,
+		"log":[
+			"用户123上传文件 2017-05-02",
+			"用户123上传文件 2017-05-03",
+			"用户123上传文件 2017-05-04",
+			"用户123上传文件 2017-05-05"	
+		]				
+  	},
+	{
+  		"name":"经济学原理",
+		"teacher":"张老师",
+  		"start":"2017-05-02",
+  		"end":"2017-06-02",
+  		"now":"4",
+		"planningScript":{
+			"length":"3000字",
+			"status":"0"
+		},
+		"pptFile":{
+			"length":"5000字",
+			"status":"1"
+		},
+		"scriptOpinion":true,
+		"sourceVideo":{
+			"length":"2.5小时",
+			"status":"0"
+		},
+		"videoModel":{
+			"length":"2.5小时",
+			"status":"0"
+		},
+		"modelOpinion":false,
+		"finalVideo":{
+			"length":"2.5小时",
+			"status":"0"
+		},
+		"videoOpinion":false,
+		"log":[
+			"用户123上传文件 2017-05-02",
+			"用户123上传文件 2017-05-03",
+			"用户123上传文件 2017-05-04",
+			"用户123上传文件 2017-05-05"	
+		]			
+  	} 
+  ]
+}
