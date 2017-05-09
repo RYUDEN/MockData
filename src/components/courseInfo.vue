@@ -8,7 +8,11 @@
 <script>
 
 export default {
-
+    computed:{
+        lessons(){
+            return this.$store.state.data.lessons
+        }
+    }
 }
 </script>
 

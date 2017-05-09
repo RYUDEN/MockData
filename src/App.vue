@@ -37,6 +37,7 @@ console.log(this.store)
 
 export default {
   name: 'app',
+  store,
   components: {
     courseBase,
     lessonMain,
@@ -50,7 +51,7 @@ export default {
   created(){
     this.$http.get('https://www.easy-mock.com/mock/591009d6f926ef14e26a56e8/lithii/main').then(response => {
         var res = response.body;
-        
+        this.$store.commit('data',res);
     })
   }
 }

@@ -19,6 +19,11 @@
 <script>
 export default {
   name: 'courseBase',
+	computed:{
+		project(){
+			return this.$store.state.data.project
+		}
+	}
  
 }
 </script>
