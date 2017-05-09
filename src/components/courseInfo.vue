@@ -1,5 +1,8 @@
 <template>
-  
+    <div>
+        <p>{{lessons.name}}</p>
+        <p>{{lessons.teacher}}</p>        
+    </div> 
 </template>
 
 <script>
