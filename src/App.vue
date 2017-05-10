@@ -1,13 +1,29 @@
 <template>
   <div id="app">
-    <courseBase></courseBase>
-    <lessonNum></lessonNum>
-    <lessonName></lessonName>
-    <lessonMain></lessonMain>
-    <courseInfo></courseInfo>
-    <lessonMember></lessonMember>
-    <lessonLog></lessonLog>
-    <lessonOperation></lessonOperation>
+    <div class="project-preview">
+      <course-base></course-base>
+      <course-info></course-info>
+    </div>
+    <div class="lesson-list" v-for="(lesson,key) in this.$store.state.data.lessons">
+      <div class="item-list item">
+        <lesson-num :num="key"></lesson-num>
+      </div>
+      <div class="item-name item">
+        <lesson-name :name="lesson"></lesson-name>
+      </div>
+      <div class="item-main item">
+        <lesson-main :main="lesson"></lesson-main>
+      </div>
+      <div class="item-member item">
+        <lesson-member></lesson-member>
+      </div>
+      <div class="item-log item">
+        <lesson-log :logs="lesson.log"></lesson-log>
+      </div>
+      <div class="item-operation item">
+        <lesson-operation :operation="lesson"></lesson-operation>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,7 +41,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
-      data: null//保存当前章节的信息
+      data:'',//保存当前章节的信息
     },
     mutations: {
 			data(state, payload){
@@ -33,10 +49,8 @@ const store = new Vuex.Store({
 			}
 		}
 })
-console.log(this.store)
 
 export default {
-  name: 'app',
   store,
   components: {
     courseBase,
@@ -51,7 +65,7 @@ export default {
   created(){
     this.$http.get('https://www.easy-mock.com/mock/591009d6f926ef14e26a56e8/lithii/main').then(response => {
         var res = response.body;
-        this.$store.commit('data',res);
+        this.$store.commit('data',res)
     })
   }
 }
@@ -63,6 +77,17 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
 }
+  .lesson-item-title{
+
+  }
+  .lesson-list{
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .item{
+    display: block;
+    flex:1;
+  }
 </style>
